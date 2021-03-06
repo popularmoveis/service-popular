@@ -60,7 +60,7 @@ public class CategoriaController {
 		if (categoriaAtual.isPresent()) {
 
 			BeanUtils.copyProperties(categoria, categoriaAtual);
-			categoria = categoriaRepository.save(categoriaAtual.get());
+			categoria = cadastroCategoria.salvar(categoriaAtual.get());
 
 			return ResponseEntity.ok(categoriaAtual);
 		} else {
