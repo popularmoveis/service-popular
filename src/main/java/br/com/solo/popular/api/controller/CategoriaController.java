@@ -72,6 +72,7 @@ public class CategoriaController {
 
 	@DeleteMapping("/{categoriaId}")
 	public ResponseEntity<Categoria> remover(@PathVariable Long categoriaId) {
+		
 		try {
 			cadastroCategoria.remover(categoriaId);
 			return ResponseEntity.noContent().build();
