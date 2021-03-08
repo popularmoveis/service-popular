@@ -40,20 +40,28 @@ public class Produto {
 
 	@Column(nullable = false)
 	private String pro_nome;
-	
+
 	@Column(nullable = false)
 	private String pro_descricao;
-	
+
+	@Column(nullable = false)
+	private BigDecimal pro_altura;
+
+	@Column(nullable = false)
+	private BigDecimal pro_largura;
+
+	@Column(nullable = false)
+	private BigDecimal pro_comprimento;
+
 	@Column(nullable = false)
 	private BigDecimal pro_preco;
-	
+
 	@Column(nullable = false)
 	private Boolean pro_ativo;
-	
+
 	@JsonIgnore
 	@ManyToMany
 	@JoinTable(name = "TB_PRODUTO_CATEGORIA", joinColumns = @JoinColumn(name = "produto_id"), inverseJoinColumns = @JoinColumn(name = "categoria_id"))
 	private List<Categoria> categorias = new ArrayList<>();
-
 
 }

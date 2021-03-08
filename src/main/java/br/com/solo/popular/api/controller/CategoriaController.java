@@ -64,9 +64,8 @@ public class CategoriaController {
 
 			return ResponseEntity.ok(categoriaAtual);
 		} else {
-			ResponseEntity.notFound().build();
+			return ResponseEntity.notFound().build();
 		}
-		return null;
 
 	}
 
